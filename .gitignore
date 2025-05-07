@@ -1,0 +1,19 @@
+# Ignore datasets
+data/
+*.npz
+
+# Python + environment
+__pycache__/
+*.pyc
+*.pkl
+*.pt
+*.pth
+
+# Logs & outputs
+outputs/
+checkpoints/
+logs/
+
+# VSCode or other IDE
+.vscode/
+.idea/
