@@ -1,5 +1,5 @@
 # train.py
-
+import os
 import torch
 from torch.utils.data import DataLoader
 import torch.nn as nn
@@ -51,3 +51,8 @@ for epoch in range(num_epochs):
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+
+save_path = './checkpoints/final_model.pth'
+os.makedirs(os.path.dirname(save_path), exist_ok=True)
+torch.save(model.state_dict(), save_path)
+print(f"[✓] Saved final model to: {save_path}")
